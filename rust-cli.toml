@@ -1,0 +1,14 @@
+name = "rust-cli"
+
+# Compose order matters: later layers win on file conflicts. pj-rust
+# overrides anything pj-base happens to ship with the same name;
+# pj-rust-cli overrides pj-rust the same way.
+
+[[templates]]
+source = "../pj-base"
+
+[[templates]]
+source = "../pj-rust"
+
+[[templates]]
+source = "../pj-rust-cli"
