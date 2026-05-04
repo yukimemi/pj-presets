@@ -3,12 +3,17 @@ name = "rust-cli"
 # Compose order matters: later layers win on file conflicts. pj-rust
 # overrides anything pj-base happens to ship with the same name;
 # pj-rust-cli overrides pj-rust the same way.
+#
+# Sources are git URLs so this preset works the moment kata clones
+# pj-presets — no separate clone of each template repo. Kata
+# normalises the `github.com/...` shorthand to `https://...` and
+# clones each into ~/.cache/kata/templates/ on first use.
 
 [[templates]]
-source = "../pj-base"
+source = "github.com/yukimemi/pj-base"
 
 [[templates]]
-source = "../pj-rust"
+source = "github.com/yukimemi/pj-rust"
 
 [[templates]]
-source = "../pj-rust-cli"
+source = "github.com/yukimemi/pj-rust-cli"
