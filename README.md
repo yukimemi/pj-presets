@@ -6,9 +6,10 @@ project shape.
 
 ## Available presets
 
-| Spec | Layers |
-|---|---|
-| `rust-cli.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-cli`](https://github.com/yukimemi/pj-rust-cli) |
+| Spec | Layers | Use for |
+|---|---|---|
+| `rust-cli.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-cli`](https://github.com/yukimemi/pj-rust-cli) | Rust **binary** crates (cross-compile + GitHub Release + crates.io publish) |
+| `rust-lib.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-lib`](https://github.com/yukimemi/pj-rust-lib) | Rust **library** crates (crates.io publish + auto-generated GitHub release notes, no binaries) |
 
 ## Usage
 
