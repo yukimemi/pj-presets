@@ -1,0 +1,19 @@
+name = "rust-lib"
+
+# Sibling preset to rust-cli for library crates. Same pj-base +
+# pj-rust foundation, but pj-rust-lib's release.yml publishes to
+# crates.io with auto-generated GitHub release notes only — no
+# cross-compile, no binary attach. See yukimemi/pj-rust-lib for
+# the layer's content.
+#
+# Compose order matters: later layers win on file conflicts.
+# pj-rust overrides pj-base; pj-rust-lib overrides pj-rust.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-rust"
+
+[[templates]]
+source = "github.com/yukimemi/pj-rust-lib"
