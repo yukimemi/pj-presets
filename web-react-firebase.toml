@@ -1,0 +1,24 @@
+name = "web-react-firebase"
+
+# Vite + React + TypeScript + Tailwind web app with Firebase
+# Hosting + Firestore + Storage + Vercel mirror. The kakeizu
+# shape — use this when the project needs Firebase Auth /
+# Firestore / Storage and benefits from Vercel preview
+# deployments running alongside Firebase Hosting prod.
+#
+# Compose order matters: later layers win on file conflicts.
+# pj-firebase sits at the top and overrides any earlier layer's
+# files with the same name (notably it owns AGENTS.md's
+# `kata:agents:firebase:*` block).
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-pnpm"
+
+[[templates]]
+source = "github.com/yukimemi/pj-react-web"
+
+[[templates]]
+source = "github.com/yukimemi/pj-firebase"

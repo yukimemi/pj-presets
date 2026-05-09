@@ -1,0 +1,21 @@
+name = "web-react"
+
+# Vite + React + TypeScript + Tailwind web app, no Firebase /
+# Vercel wiring. Use this when the project is a plain SPA you'll
+# host elsewhere (GitHub Pages, Cloudflare Pages, S3, …).
+#
+# Compose order matters: later layers win on file conflicts.
+# pj-pnpm overrides anything pj-base ships with the same name;
+# pj-react-web overrides pj-pnpm the same way.
+#
+# Sources are git URLs so this preset works the moment kata
+# clones pj-presets — no separate clone of each template repo.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-pnpm"
+
+[[templates]]
+source = "github.com/yukimemi/pj-react-web"
