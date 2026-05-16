@@ -1,0 +1,24 @@
+name = "rust-workspace"
+
+# Cargo workspace shape: pj-base + pj-rust + pj-rust-workspace.
+# Use this when the project is a workspace with member crates under
+# crates/<name>, rather than a single crate. pj-rust-workspace adds:
+#   * Cargo.toml workspace skeleton (resolver=2, members=[],
+#     shared [workspace.package] / [workspace.dependencies],
+#     [profile.dev] debug="line-tables-only" PDB-LIMIT workaround).
+#   * Makefile.toml [config] fragment turning off cargo-make's
+#     workspace recursion (cargo's --workspace already covers
+#     every member).
+#
+# Member crates themselves don't get pj-rust-cli applied at the
+# workspace root — apply pj-rust-cli (or a future pj-rust-lib)
+# per-member under crates/<name>/ as needed.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-rust"
+
+[[templates]]
+source = "github.com/yukimemi/pj-rust-workspace"
