@@ -1,0 +1,18 @@
+name = "nvim"
+
+# Compose order matters: later layers win on file conflicts. pj-nvim
+# overrides anything pj-base happens to ship with the same name.
+#
+# Only two layers — Lua is interpreted, so there is no language layer
+# equivalent to pj-rust (no toolchain pin, no build system, no task
+# runner). pj-nvim carries the CI matrix and the formatting policy
+# directly on top of pj-base.
+#
+# Sources are git URLs so this preset works the moment kata clones
+# pj-presets — no separate clone of each template repo.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-nvim"
