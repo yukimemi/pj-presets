@@ -1,0 +1,13 @@
+# Denops plugins (Vim/Neovim plugins using the denops platform).
+# Two layers only — Deno is compiled/interpreted at runtime, so there
+# is no toolchain/build layer between them. pj-denops carries the OS
+# test matrix and the automerge pipeline directly on top of pj-base.
+#
+# Sources are git URLs so this preset works the moment kata clones
+# pj-presets — no separate clone of each template repo.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-denops"
