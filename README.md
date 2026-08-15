@@ -8,6 +8,7 @@ project shape.
 
 | Spec | Layers | Use for |
 |---|---|---|
+| `base.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) | Language-agnostic boilerplate only (profile README, docs, config repos). |
 | `rust-cli.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-cli`](https://github.com/yukimemi/pj-rust-cli) | Rust **binary** crates (cross-compile + GitHub Release + crates.io publish) |
 | `rust-lib.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-lib`](https://github.com/yukimemi/pj-rust-lib) | Rust **library** crates (crates.io publish + auto-generated GitHub release notes, no binaries) |
 | `rust-workspace.toml` | [`pj-base`](https://github.com/yukimemi/pj-base) + [`pj-rust`](https://github.com/yukimemi/pj-rust) + [`pj-rust-workspace`](https://github.com/yukimemi/pj-rust-workspace) | Rust **workspace** root with `crates/<name>/` members (workspace skeleton + cargo-make recursion off). Apply `rust-cli` / `rust-lib` per-member as needed. |
@@ -18,11 +19,8 @@ project shape.
 ## Usage
 
 ```sh
-# Phase 2+ (git fetch supported)
-kata init github.com/yukimemi/pj-presets:rust-cli ./your-new-pj
-
-# Phase 1 (local sources only) — point at a checkout of this repo
-kata init ~/src/github.com/yukimemi/pj-presets/rust-cli.toml --at ./your-new-pj
+# Bootstrap from a preset — kata fetches templates from GitHub
+kata init github.com/yukimemi/pj-presets:rust-cli
 ```
 
 ## Why a separate `pj-presets` repo

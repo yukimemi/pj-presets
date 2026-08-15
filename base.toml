@@ -1,0 +1,10 @@
+name = "base"
+
+# Minimal preset: just the language-agnostic boilerplate layer.
+# Use this for non-language-specific repos (profile README, docs,
+# config repos, etc.) that want kata management, Renovate
+# automerge, and agent guidance scaffolding but no Rust / Go /
+# Bun / etc. toolchain.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
