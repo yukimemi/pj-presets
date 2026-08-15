@@ -1,3 +1,5 @@
+name = "denops"
+
 # Denops plugins (Vim/Neovim plugins using the denops platform).
 # Two layers only — Deno is compiled/interpreted at runtime, so there
 # is no toolchain/build layer between them. pj-denops carries the OS
