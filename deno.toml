@@ -1,0 +1,19 @@
+name = "deno"
+
+# Plain Deno projects — apps, CLIs, scrapers, cron jobs, JSR
+# libraries. Two layers only: Deno ships its own toolchain
+# (formatter, linter, type checker, test runner, task runner), so
+# there is no toolchain/build layer between pj-base and pj-deno.
+#
+# For Denops *plugins* use the `denops` preset instead — that layer's
+# CI installs real Vim / Neovim binaries, which a plain Deno project
+# has no use for.
+#
+# Sources are git URLs so this preset works the moment kata clones
+# pj-presets — no separate clone of each template repo.
+
+[[templates]]
+source = "github.com/yukimemi/pj-base"
+
+[[templates]]
+source = "github.com/yukimemi/pj-deno"
